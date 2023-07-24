@@ -1,0 +1,58 @@
+.part1{
+    width: 100%;
+}
+
+.part1 .formContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.part1 .formContainer form .input-field input{
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 3px solid rgb(236, 178, 46);
+    padding: 10px 5px;
+    margin-top: 20px;
+}
+
+.text-danger{
+    color: #ff9a8f;
+}
+
+.text-danger small{
+    font-size: 14px;
+}
+
+input.ng-invalid.ng-touched{
+    border-color: #ff9a8f !important;
+    color: #ff9a8f;
+}
+
+.buttonGrp{
+    margin: 40px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttonGrp input[type="submit"]:disabled{
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+input[type="submit"], input[type="button"]{
+    padding: 10px 20px ;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    border-radius: 30px;
+    background: rgb(236, 178, 46);
+    cursor: pointer;
+}

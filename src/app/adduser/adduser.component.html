@@ -1,0 +1,61 @@
+<div class="part1">
+    <div class="formContainer">
+        <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+            <div class="title">
+                <div class="dot"></div>
+                <div class="name">Add User</div>
+                <div class="dot"></div>
+            </div>
+
+            <div class="input-field">
+                <input type="text" name="name" id="name" placeholder="Enter name here..." #name="ngModel" ngModel
+                    required>
+            </div>
+            <div class="text-danger" *ngIf="name.invalid && name.touched"><small>User name is required</small></div>
+
+
+            <div class="input-field">
+                <input type="text" name="department" id="department" placeholder="Enter department here..."
+                    #dept="ngModel" ngModel required>
+            </div>
+            <div class="text-danger" *ngIf="dept.invalid && dept.touched"><small>Department name is required</small>
+            </div>
+
+
+            <div class="input-field">
+                <input type="email" name="email" id="email" placeholder="Enter email here..." #email="ngModel" ngModel
+                    email required>
+            </div>
+            <div class="text-danger" *ngIf="email.invalid && email.touched"><small>Email is invalid</small></div>
+
+
+            <div class="input-field">
+                <input type="password" name="password" id="password" placeholder="Enter password here..." ngModel
+                    #password="ngModel" pattern="^(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,16}$" required>
+            </div>
+            <div class="text-danger" *ngIf="password.invalid && password.touched"><small>Password is invalid</small>
+            </div>
+
+            <div class="input-field">
+                <input type="text" name="designation" id="designation" placeholder="Enter designation here..." ngModel
+                    #desg="ngModel" required>
+            </div>
+            <div class="text-danger" *ngIf="desg.invalid && desg.touched"><small>Designation is required</small>
+            </div>
+
+            <div class="input-field">
+                <input type="number" name="salary" id="salary" placeholder="Enter salary here..." ngModel
+                    #salary="ngModel" min="1000" step="500" required>
+            </div>
+            <div class="text-danger" *ngIf="salary.invalid && salary.touched"><small>Salary is required</small>
+            </div>
+
+
+            <div class="buttonGrp">
+                <input type="submit" value="Add user"
+                [disabled]="(email.invalid || password.invalid || name.invalid || dept.invalid || desg.invalid || salary.invalid)">
+            <input type="button" value="Reset" (click)="reset(myForm)">
+            </div>
+        </form>
+    </div>
+</div>

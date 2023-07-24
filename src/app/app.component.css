@@ -1,0 +1,29 @@
+.outerContainer{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 70px;
+}
+
+.outerContainer .container{
+    width: 80%;
+    height: fit-content;
+    /* min-height: 745px; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    column-gap: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 50px;
+    border: 3px solid rgb(236, 178, 46);
+    border-radius: 7px;
+}
+
+app-adduser{
+    width: 30%;
+}
+
+app-listuser{
+    width: 70%;
+}

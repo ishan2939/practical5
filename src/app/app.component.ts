@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'practical5';
+
+  users:user[] = [];
+}
+
+export type user = {
+  name: string,
+  email: string,
+  department: string,
+  password: string,
+  designation: string,
+  salary: number,
+  createdAt: Date
 }

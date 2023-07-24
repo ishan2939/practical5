@@ -1,0 +1,89 @@
+.part2{
+    width: 100%;   
+}
+
+.part2 .users{
+    /* display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; */
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+    gap: 20px 15px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.part2 .users .user{
+    width: 250px;
+    border: 2px solid rgb(236, 178, 46);
+    padding: 20px;
+    font-size: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: .3s;
+}
+
+.part2 .users .user .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 17px;
+}
+.part2 .users .user .header .name{
+    text-transform: capitalize;
+}
+.part2 .users .user .header .symbol{
+    background: rgb(236, 178, 46);
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    border-radius: 50%;
+}
+
+.part2 .users .user .designation{
+    margin-bottom: 10px;
+}
+
+.part2 .users .user .section{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.part2 .users .user .section .department{
+    padding: 3px 7px;
+    background: #ff9a8f;
+    font-size: 12px;
+    color: #fff;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.part2 .users .user .section .date{
+    width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.part2 .users .user:hover{
+    transform: scale(1.05);
+}
+
+.part2 .users::-webkit-scrollbar{
+    display: none;
+}

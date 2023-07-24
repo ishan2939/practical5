@@ -1,0 +1,33 @@
+<div class="part2">
+    <div class="title">
+        <div class="dot"></div>
+        <div class="name">All Users</div>
+        <div class="dot"></div>
+    </div>
+    <div class="users">
+        <div class="warn" *ngIf="users.length==0; else elseBlock">No users in database 😢</div>
+        <ng-template #elseBlock>
+
+            <div class="user" *ngFor="let user of users">
+                <div class="header">
+                    <div class="name">{{user.name}}</div>
+                    <div class="symbol">
+                        <div>
+                            {{
+                                (user.name.charAt(0).toUpperCase()) + 
+                                (user.name.split(' ')[1] ? user.name.split(' ')[1].charAt(0).toUpperCase() : '')
+                            }}
+                        </div>
+                    </div>
+                </div>
+                <div class="designation">{{user.designation}}</div>
+                <div class="email">Email: {{user.email}}</div>
+                <div class="salary">Salary: ₹{{user.salary}}</div>
+                <div class="section">
+                    <div class="department">{{user.department}}</div>
+                    <div class="date">{{user.createdAt}}</div>
+                </div>
+            </div>
+        </ng-template>
+    </div>
+</div>
